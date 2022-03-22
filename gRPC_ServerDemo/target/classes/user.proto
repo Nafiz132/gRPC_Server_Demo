@@ -1,0 +1,15 @@
+syntax="proto3";
+
+option java_package = "com.demo.grpc";
+
+service user{
+  rpc login(LogParams) returns(LogRes);
+}
+message LogParams{
+  string username= 1;
+  string password = 2;
+}
+message LogRes{
+  string message =1;
+  int32 resCode=2;
+}
